@@ -39,4 +39,18 @@ class Queries
 
         // self::DBclose($conn); // No need to close the connection, queries do not overlap
     }
+
+    public static function get_batches() {
+        $conn = self::DBopen();
+        $sql = "SELECT `batch` FROM batchrepresentative";
+
+        if ($conn->query($sql) === true) {
+            return $conn->insert_id;
+        } else {
+            // TODO: Use logger instead of echo.
+            echo $conn->error;
+        }
+
+        // self::DBclose($conn); // No need to close the connection, queries do not overlap
+    }
 }

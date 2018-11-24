@@ -38,11 +38,7 @@ new_user();
 // main()
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    switch ($_POST["action"]) {
-        case "newuser":
-            new_user();
-            break;
-    }
+    
 }
 // if (SERVER['POST']) {
 //validate inputs

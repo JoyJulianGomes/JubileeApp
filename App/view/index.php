@@ -57,7 +57,7 @@
             </h2>
           </div>
 
-          <form method="POST">
+          <form method="POST" action='../container/submit.php'>
             <div class="card-body">
               <div style="margin:20px 0px">
                 <h2 class="title" style="color:black">Personal Info</h2>
