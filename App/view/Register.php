@@ -69,6 +69,11 @@
                     <div class="rs-select2 js-select-simple select--no-search">
                       <select name="Batch">
                         <option>Choose Option</option>
+                        <?php
+                        foreach ($args["batch"] as $batchYear) {
+                            echo "<option>$batchYear</option>";
+                        }
+                        ?>
                       </select>
                       <div class="select-dropdown"></div>
                     </div>
@@ -249,9 +254,9 @@
                     <input class="table-input--style-5" type="number" name="page-5" />
                   </div>
                 </div>
-                
+
             </div>
-            
+
             <div>
               <button class="btn btn--radius-2 btn--red" type="submit">
                 Register
