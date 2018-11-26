@@ -1,5 +1,5 @@
 <?php
-// echo $_GET['url'];
+echo "url=".$_GET['url'];
 
 require_once 'Routes.php';
 
@@ -12,5 +12,8 @@ function __autoload($classname)
         require_once './controller/' . $classname . '.php';
     } elseif (file_exists('./view/' . $classname . '.php')) {
         require_once './view/' . $classname . '.php';
+    }
+    elseif (file_exists('./view/filepicker/' . $classname . '.php')) {
+        require_once './view/filepicker/' . $classname . '.php';
     }
 }

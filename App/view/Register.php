@@ -12,7 +12,7 @@
     <meta name="keywords" content="Colorlib Templates" />
 
     <!-- Title Page -->
-    <title>Au Register Forms by Colorlib</title>
+    <title>Registration</title>
 
     <!-- Icons font CSS -->
     <link
@@ -44,6 +44,7 @@
 
     <!-- Table CSS-->
     <link href="view/css/table.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" href="view/css/filepicker.css" />
   </head>
 
   <body>
@@ -57,7 +58,7 @@
             </h2>
           </div>
 
-          <form method="POST" action='../container/submit.php'>
+          <form method="POST" action='controller/RegisterController.php'>
             <div class="card-body">
               <div style="margin:20px 0px">
                 <h2 class="title" style="color:black">Personal Info</h2>
@@ -104,6 +105,19 @@
                         <label class="label--desc">last name</label>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="name">Photo:</div>
+                <div class="value">
+                  <div class="input-group" style="display:flex">
+                    <span class="input-group-btn">
+                      <span class="btn btn--radius-2 btn--blue btn-file">
+                        Browse <input name="photo" type="file" single />
+                      </span>
+                    </span>
+                    <input type="text" class="input--style-5" readonly />
                   </div>
                 </div>
               </div>
@@ -190,7 +204,7 @@
                 </div>
               </div>
               <div style="margin:20px 0px">
-                <h2 class="title" style="color:black">Participant Names</h2>
+                <h2 class="title" style="color:black">Participant Guest Information</h2>
               </div>
               <div class="container">
                 <div class="form-row row row-space">
@@ -273,7 +287,7 @@
     <script src="view/vendor/select2/select2.min.js"></script>
     <script src="view/vendor/datepicker/moment.min.js"></script>
     <script src="view/vendor/datepicker/daterangepicker.js"></script>
-
+    <script src="view/js/filepicker.js"></script>
     <!-- Main JS -->
     <script src="view/js/global.js"></script>
   </body>
